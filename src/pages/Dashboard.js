@@ -11,14 +11,14 @@ function Dashboard() {
     <>
       <Header />
       <Stage>
-        <Typography variant="h1" component="h1" gutterBottom>
+        <Typography variant="h2" component="h1" gutterBottom sx={{ mb: 4, fontWeight: 700 }}>
           Dashboard
         </Typography>
-        <Typography variant="body1">
+        <Typography variant="body1" sx={{ mb: 2 }}>
           Welcome, {user?.name || 'User'}!
         </Typography>
         {user?.org_id && (
-          <Typography variant="body1">
+          <Typography variant="body1" sx={{ color: 'text.secondary' }}>
             Organization: {user.org_id}
           </Typography>
         )}

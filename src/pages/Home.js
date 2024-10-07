@@ -1,18 +1,14 @@
 import React from 'react';
 import { Typography } from '@mui/material';
-import Header from '../components/Header';
 import Stage from '../components/Stage';
 
 function Home() {
   return (
-    <>
-      <Header />
-      <Stage>
-        <Typography variant="h1" component="h1" gutterBottom>
-          Welcome to once
-        </Typography>
-      </Stage>
-    </>
+    <Stage>
+      <Typography variant="h3" sx={{ fontWeight: 500, fontSize: { xs: '1.5rem', md: '2.5rem' } }}>
+        Cooking up something good
+      </Typography>
+    </Stage>
   );
 }
 

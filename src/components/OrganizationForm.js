@@ -33,8 +33,8 @@ const OrganizationForm = () => {
   };
 
   return (
-    <Box component="form" onSubmit={handleSubmit} sx={{ mt: 4 }}>
-      <Typography variant="h4" component="h1" gutterBottom>
+    <Box component="form" onSubmit={handleSubmit} sx={{ mt: 4, maxWidth: 400, mx: 'auto' }}>
+      <Typography variant="h4" component="h1" gutterBottom sx={{ mb: 4, fontWeight: 700 }}>
         Create Organization and User
       </Typography>
       <TextField
@@ -45,6 +45,7 @@ const OrganizationForm = () => {
         value={formData.organizationName}
         onChange={handleChange}
         required
+        sx={{ mb: 2 }}
       />
       <TextField
         fullWidth
@@ -55,6 +56,7 @@ const OrganizationForm = () => {
         value={formData.userEmail}
         onChange={handleChange}
         required
+        sx={{ mb: 2 }}
       />
       <TextField
         fullWidth
@@ -65,12 +67,13 @@ const OrganizationForm = () => {
         value={formData.userPassword}
         onChange={handleChange}
         required
+        sx={{ mb: 3 }}
       />
-      <Button type="submit" variant="contained" color="primary" sx={{ mt: 2 }}>
+      <Button type="submit" variant="contained" color="primary" fullWidth sx={{ py: 1.5 }}>
         Create Organization and User
       </Button>
       {message && (
-        <Typography color={message.includes('Error') ? 'error' : 'success'} sx={{ mt: 2 }}>
+        <Typography color={message.includes('Error') ? 'error' : 'success'} sx={{ mt: 2, textAlign: 'center' }}>
           {message}
         </Typography>
       )}
