@@ -18,7 +18,7 @@ const OrganizationForm = () => {
     event.preventDefault();
     setMessage('');
 
-    const apiUrl = process.env.REACT_APP_API_URL || '';
+    const apiUrl = process.env.REACT_APP_API_URL || 'https://once-backend-dev-3649030e1efe.herokuapp.com';
     try {
       const response = await axios.post(
         `${apiUrl}/api/auth/create-organization-and-user`,

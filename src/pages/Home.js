@@ -9,7 +9,7 @@ function Home() {
       <Header />
       <Stage>
         <Typography variant="h1" component="h1" gutterBottom>
-          Welcome to Our App
+          Welcome to once
         </Typography>
       </Stage>
     </>
