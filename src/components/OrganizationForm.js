@@ -18,9 +18,10 @@ const OrganizationForm = () => {
     event.preventDefault();
     setMessage('');
 
+    const apiUrl = process.env.REACT_APP_API_URL || '';
     try {
       const response = await axios.post(
-        '/api/auth/create-organization-and-user',
+        `${apiUrl}/api/auth/create-organization-and-user`,
         formData
       );
       setMessage('Organization and user created successfully!');
